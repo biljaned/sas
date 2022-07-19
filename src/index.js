@@ -4,7 +4,7 @@ import { StudTool } from './components/StudTool'
 
 
 // const carList = [
-//     { id: 1, godine: 20, adresa: 'Mrakovicka 22'},
+//     { id: 1, godine: 20, adresa: 'Mrakovicka 55'},
 //     { id: 2, godine: 25, adresa: 'Durmitorska'}
 // ];
 

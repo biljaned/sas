@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import * as ReactDOMClient from 'react-dom/client';
+import { StudTool } from './components/StudTool'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+
+
+// const carList = [
+//     { id: 1, godine: 20, adresa: 'Mrakovicka 22'},
+//     { id: 2, godine: 25, adresa: 'Durmitorska'}
+// ];
+
+
+const rootElement = document.getElementById("root");
+
+const root = ReactDOMClient.createRoot(rootElement);
+// root.render(<StudTool cars={carList} />
+root.render(<StudTool />
+
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

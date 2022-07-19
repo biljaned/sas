@@ -1,0 +1,2 @@
+
+GET https://ge69b092f0f2339-db202204051158.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/studenti2/PrikaziStudente HTTP/1.1

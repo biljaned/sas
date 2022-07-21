@@ -1,6 +1,7 @@
 import React, { memo, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from '../hooks/useForm';
+import useRefreshToken from '../hooks/useRefreshToken';
 
 export const StudForm = memo(forwardRef(({ onSubmitStudent, buttonText }, ref) => {
     console.log('render automobila');
@@ -19,6 +20,8 @@ export const StudForm = memo(forwardRef(({ onSubmitStudent, buttonText }, ref) =
 
     };
 
+   
+    const refresh=useRefreshToken;
     return <form>
         <div>
             <label htmlFor="godine-input">Godine:</label>
@@ -30,6 +33,9 @@ export const StudForm = memo(forwardRef(({ onSubmitStudent, buttonText }, ref) =
             <input type="text" id="adresa-input" name="adresa" value={studForm.adresa} onChange={change} />
         </div>
         <button type="button" onClick={submitStudent}>{buttonText}</button>
+        <button type="button" onClick={() => refresh()}>REFRESH</button>
+        <br />
+               
     </form>
 
 }));

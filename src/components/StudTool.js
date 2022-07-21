@@ -8,9 +8,11 @@ import { StudTable } from './StudTable';
 import { StudForm } from './StudForm';
 
 
+
 export const StudTool = () => {
     const [students, setStudents] = useState([]);
     const [editStudentId, setEditStudentId] = useState(-1);
+    
 
     const defaultInputRef = useDefaultInputFocus();
 
@@ -55,7 +57,8 @@ export const StudTool = () => {
                 onEditStudent={setEditStudentId} onDeleteStudent={deleteStudent}
                 onSaveStudent={replaceStudent} onCancelStudent={cancelStudent} />
             <StudForm buttonText="Dodaj studenta" onSubmitStudent={addStudent}
-                ref={defaultInputRef} />
+                ref={defaultInputRef} />    
+                      
 
 
         </>

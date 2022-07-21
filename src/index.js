@@ -1,5 +1,6 @@
 import * as ReactDOMClient from 'react-dom/client';
 import { StudTool } from './components/StudTool'
+//import Login from './components/Login'
 
 
 
@@ -13,6 +14,7 @@ const rootElement = document.getElementById("root");
 
 const root = ReactDOMClient.createRoot(rootElement);
 // root.render(<StudTool cars={carList} />
-root.render(<StudTool />
-
+//LINIJA ZA POCETNU STRANICU: STUDENTI
+root.render(<StudTool /> 
+//root.render(<Login/> 
 );

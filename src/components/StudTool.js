@@ -9,6 +9,7 @@ import { StudForm } from './StudForm';
 
 
 
+
 export const StudTool = () => {
     const [students, setStudents] = useState([]);
     const [editStudentId, setEditStudentId] = useState(-1);
@@ -52,6 +53,7 @@ export const StudTool = () => {
 
     return (
         <>
+                      
             <ToolHeader headerText="Student" />
             <StudTable students={students} editStudentId={editStudentId}
                 onEditStudent={setEditStudentId} onDeleteStudent={deleteStudent}

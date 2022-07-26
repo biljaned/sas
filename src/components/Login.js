@@ -1,5 +1,6 @@
 //import { useRef, useState, useEffect, useContext } from 'react';
 //import AuthContext from "../context/AuthProvider";
+import { StudTool } from "./StudTool";
 import {
     BrowserRouter as Router,
     Route,

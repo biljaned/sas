@@ -43,12 +43,12 @@ function Login() {
 
         <Router>
           <Switch>
-          <Route exact path="https://spec2022.netlify.app/" element={<StudTool />} />
+          <Route exact path="StudTool" element={<StudTool />} />
            
           </Switch>
           <div className="list">
             <ul>
-            <li><Link to="https://spec2022.netlify.app/">Uloguj se</Link></li>  
+            <li><Link to="StudTool">Uloguj se</Link></li>  
              
             </ul>
           </div>

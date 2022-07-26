@@ -1,9 +1,9 @@
 import axios from "axios";
-import useRefreshToken from '../hooks/useRefreshToken';
+//import useRefreshToken from '../hooks/useRefreshToken';
 //const baseURL = 'https://ge69b092f0f2339-sas1.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/oauth/token';
 const baseURL2 = 'https://ge69b092f0f2339-sas1.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/sas/students';
 //const getCollectionURL = () => baseURL;
-const accToken='BTbogx76_vHEdSTpn-XxVw';
+const accToken='BmjM6LzI9YkfQx9JKxBvcA';
 
 export const getAllStudents = async () => {
   
@@ -22,6 +22,7 @@ students = res.items;
   
 //sortiranje
   students.sort((a,b) => a.id - b.id);
+
 
   
  

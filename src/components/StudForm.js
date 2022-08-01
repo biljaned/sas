@@ -23,17 +23,22 @@ export const StudForm = memo(forwardRef(({ onSubmitStudent, buttonText }, ref) =
    
     const refresh=useRefreshToken;
     return <form>
+        <br />
         <div>
             <label htmlFor="godine-input">Godine:</label>
             <input type="text" id="godine-input" name="godine" ref={ref}
                 value={studForm.godine} onChange={change} />
         </div>
+        <br />
         <div>
             <label htmlFor="adresa-input">Adresa:</label>
             <input type="text" id="adresa-input" name="adresa" value={studForm.adresa} onChange={change} />
         </div>
+        <br />
         <button type="button" onClick={submitStudent}>{buttonText}</button>
-        <button type="button" onClick={() => refresh()}>REFRESH</button>
+        <br />
+        <br />
+        <button type="button" onClick={() => refresh()}>SAČUVAJ</button>
         <br />
                
     </form>

@@ -3,7 +3,7 @@ import axios from "axios";
 //const baseURL = 'https://ge69b092f0f2339-sas1.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/oauth/token';
 const baseURL2 = 'https://ge69b092f0f2339-sas1.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/sas/students';
 //const getCollectionURL = () => baseURL;
-const accToken='BmjM6LzI9YkfQx9JKxBvcA';
+const accToken='PFiNDKJN9n3-Wyh3-gVs0Q';
 
 export const getAllStudents = async () => {
   

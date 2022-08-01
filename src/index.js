@@ -1,6 +1,6 @@
 import * as ReactDOMClient from 'react-dom/client';
-import { StudTool } from './components/StudTool'
-// import App from './components/App';
+// import { StudTool } from './components/StudTool'
+import App from './components/App';
 
 
 
@@ -16,6 +16,6 @@ const rootElement = document.getElementById("root");
 const root = ReactDOMClient.createRoot(rootElement);
 // root.render(<StudTool cars={carList} />
 //LINIJA ZA POCETNU STRANICU: STUDENTI
-root.render(<StudTool /> );
-// root.render(<App/> );
+// root.render(<StudTool /> );
+root.render(<App/> );
 

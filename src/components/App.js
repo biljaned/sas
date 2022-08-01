@@ -1,54 +1,25 @@
 //import { useRef, useState, useEffect, useContext } from 'react';
 //import AuthContext from "../context/AuthProvider";
 import { StudTool } from "./StudTool";
-import Proba from "./Proba";
+import Login from "./Login";
 import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
-    Link
-  } from "react-router-dom";
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from "react-router-dom";
 
 
 function App() {
-    return (
-      
-        <div className="App">
-          <Router>
-<h1>Logovanje</h1>
-                    <form >
-                        <label htmlFor="username">Korisničko ime:</label>
-                        <input
-                            type="text"
-                            id="username"                          
-                            autoComplete="off"                            
-                            required
-                        />
-                    <br/>
-                    <br/>
-                        <label htmlFor="password">Šifra:</label>
-                        <input
-                            type="password"
-                            id="password"                            
-                            required
-                        />
-                        <br/>
-                        <br/>
+  return (
 
-  <button >Uloguj se</button>
-                    </form>        
-          <Switch>
-          <Route exact path="StudTool" element={<StudTool />} />
-          <Route exact path="proba" ><Proba/></Route>
-          </Switch>
-          <div className="list">
-            <ul>
-            <li><Link to="StudTool">Uloguj se</Link></li>  
-            <li><Link to="Proba">Otvori probu</Link></li>              
-            </ul>
-          </div>
-        </Router>
-      </div>  
-    );
-  }
-  export default App;
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route exact path="/" ><Login /></Route>
+          <Route exact path="/studtool" ><StudTool /></Route>
+        </Switch>
+      </Router>
+    </div>
+  );
+}
+export default App;

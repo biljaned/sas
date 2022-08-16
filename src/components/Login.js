@@ -49,17 +49,13 @@ const Login = () => {
                 <br />
                 <br />
 
-                {/* <button onClick={login}>Uloguj se</button> */}
+                
                 <button type="submit" onClick={() => {
                     if (ime === 'pera' && prezime === 'peric') { history.push('/StudTool') }
                     else {console.log('----POGRESNI PARAMETRI----------')}
                 }}>Uloguj se</button>
             </form>
-            {/* <div className="list">
-                <ul>
-                    <li><Link to="/StudTool">Uloguj se</Link></li>
-                </ul>
-            </div> */}
+           
         </>
     );
 }

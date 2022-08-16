@@ -1,9 +1,28 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
+import { useState } from 'react';
 import { login } from '../services/auth';
 
+
+
 const Login = () => {
-console.log("Login stranica")
+    const history = useHistory();
+    // const isValid = formValidation();
+    const [ime, setIme] = useState('');
+    const [prezime, setPrezime] = useState('');
+
+    const handleChange = event => {
+        setIme(event.target.value);
+        console.log('ime je:', event.target.value);
+
+    };
+
+    const handleChange1 = event => {
+        setPrezime(event.target.value);
+        console.log('prezime je:', event.target.value);
+    };
+
+    console.log("Login stranica")
     return (
         <>
             <h1>Logovanje</h1>
@@ -13,6 +32,8 @@ console.log("Login stranica")
                     type="text"
                     id="username"
                     autoComplete="off"
+                    onChange={handleChange}
+                    value={ime}
                     required
                 />
                 <br />
@@ -21,18 +42,25 @@ console.log("Login stranica")
                 <input
                     type="password"
                     id="password"
+                    onChange={handleChange1}
+                    value={prezime}
                     required
                 />
                 <br />
                 <br />
 
-                <button onClick={login}>Uloguj se</button>
-            </form>  <div className="list">
+                {/* <button onClick={login}>Uloguj se</button> */}
+                <button type="submit" onClick={() => {
+                    if (ime === 'pera' && prezime === 'peric') { history.push('/StudTool') }
+                    else {console.log('----POGRESNI PARAMETRI----------')}
+                }}>Uloguj se</button>
+            </form>
+            {/* <div className="list">
                 <ul>
                     <li><Link to="/StudTool">Uloguj se</Link></li>
-                    <li><Link to="Proba">Otvori probu</Link></li>
                 </ul>
-            </div></>
+            </div> */}
+        </>
     );
 }
 

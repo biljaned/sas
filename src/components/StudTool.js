@@ -7,7 +7,9 @@ import { ToolHeader } from './ToolHeader';
 import { StudTable } from './StudTable';
 import { StudForm } from './StudForm';
 
+import axios from "axios";
 
+const accToken = 'X447VxI6X_RzP2idn3BlEw';
 
 
 export const StudTool = () => {
@@ -45,6 +47,14 @@ export const StudTool = () => {
     const deleteStudent = useCallback(studentId => {
         setStudents(students.filter(stud => stud.id !== studentId));
         init();
+        //DODAT JE END POINT ZA BRISANJE
+        const headers = {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accToken}`,
+
+        };
+        axios.delete('https://ge69b092f0f2339-sas1.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/sas/obrisiStudenta/' + studentId, { headers })
+
     }, [students, init]);
 
     const cancelStudent = useCallback(() => {

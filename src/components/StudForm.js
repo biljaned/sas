@@ -4,20 +4,23 @@ import { useForm } from '../hooks/useForm';
 import useRefreshToken from '../hooks/useRefreshToken';
 
 export const StudForm = memo(forwardRef(({ onSubmitStudent, buttonText }, ref) => {
-    console.log('render automobila');
+    console.log('render studenta');
+    
+  
 
     const [studForm, change, resetStudForm] = useForm({
         godine: '',
         adresa: '',
-        year: 1900,
-        color: '',
-        price: 0,
+        // year: 1900,
+        // color: '',
+        // price: 0,
     });
 
     const submitStudent = () => {
         onSubmitStudent({ ...studForm });
         resetStudForm();
-
+        console.log('godina je u StudForm.js ',studForm.godine);
+        console.log('adresa je u StudForm.js ',studForm.adresa);
     };
 
    

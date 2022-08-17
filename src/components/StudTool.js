@@ -9,18 +9,19 @@ import { StudForm } from './StudForm';
 
 import axios from "axios";
 
-const accToken = 'X447VxI6X_RzP2idn3BlEw';
+const accToken = 'LeGZgK9vBkB1FA9SRWR6RA';
 
 
 export const StudTool = () => {
     const [students, setStudents] = useState([]);
     const [editStudentId, setEditStudentId] = useState(-1);
-
+    
 
     const defaultInputRef = useDefaultInputFocus();
 
     useEffect(() => {
         getAllStudents().then(students => setStudents(students));
+        
 
     }, []);
 
@@ -34,6 +35,17 @@ export const StudTool = () => {
     const addStudent = useCallback((st) => {
         setStudents(students.concat({ ...st, id: Math.max(...students.map(c => c.id)) + 1 }));
         init();
+        console.log('ID JE u StudTool.js', Math.max(...students.map(c => c.id)) + 1);
+        
+
+        //DODAT JE END POINT ZA UBACIVANJE NOVOG STUDENTA----format za ubacivanje je {"id":29,"godine":33,"adresa":"Limska"}
+        // const headers = {
+        //     "Content-Type": "application/json",
+        //     Authorization: `Bearer ${accToken}`,
+
+        // };
+        // axios.post('https://ge69b092f0f2339-sas1.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/sas/ubaciStudenta',{}, { headers })
+
     }, [students, init]);
 
     const replaceStudent = useCallback((st) => {

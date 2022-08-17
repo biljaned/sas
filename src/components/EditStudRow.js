@@ -4,18 +4,31 @@ import PropTypes from 'prop-types';
 import { studPropType } from '../propTypes/students';
 import { useForm } from '../hooks/useForm';
 
-import {useDefaultInputFocus} from '../hooks/useDefaultInputFocus';
+import { useDefaultInputFocus } from '../hooks/useDefaultInputFocus';
+import axios from "axios";
+
+const accToken = 'LeGZgK9vBkB1FA9SRWR6RA';
 
 export const EditStudRow = ({ st, onSaveStudent, onCancelStudent: cancelStudent, }) => {
     const [studForm, change] = useForm({
-       ...st
+        ...st
     });
 
     const saveStudent = () => {
         onSaveStudent({
             ...studForm,
-            id:st.id,
+            id: st.id,   
         });
+
+        
+        //DODAT JE END POINT ZA IZMENU NOVOG STUDENTA
+        const headers = {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accToken}`,
+
+        };//format za {} je {"godine":23,"adresa":"LimskaUpdate"}
+        axios.put('https://ge69b092f0f2339-sas1.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/sas/izmeniStudenta/'+st.id,{}
+        , { headers })
     };
 
     const defaultInputRef = useDefaultInputFocus();

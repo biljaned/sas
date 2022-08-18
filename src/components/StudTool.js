@@ -35,9 +35,9 @@ export const StudTool = () => {
     const addStudent = useCallback((st) => {
         setStudents(students.concat({ ...st, id: Math.max(...students.map(c => c.id)) + 1 }));
         init();
-        console.log('ID JE u StudTool.js', Math.max(...students.map(c => c.id)) + 1);
-        console.log('Godina koja je dodata u StudTool.js',st.godine);
-        console.log('Adresa koja je dodata u StudTool.js',st.adresa);
+        // console.log('ID JE u StudTool.js', Math.max(...students.map(c => c.id)) + 1);
+        // console.log('Godina koja je dodata u StudTool.js',st.godine);
+        // console.log('Adresa koja je dodata u StudTool.js',st.adresa);
 
         //DODAT JE END POINT ZA UBACIVANJE NOVOG STUDENTA----
         const headers = {

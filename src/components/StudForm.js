@@ -38,9 +38,8 @@ export const StudForm = memo(forwardRef(({ onSubmitStudent, buttonText},ref) => 
         <br />
         <button type="button" onClick={submitStudent}>{buttonText}</button>
         <br />
-        <br />
-        <button type="button" onClick={() => refresh()}>SAČUVAJ</button>
-        <br />
+        
+        
                
     </form>
 

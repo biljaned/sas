@@ -21,9 +21,9 @@ export const EditStudRow = ({ st, onSaveStudent, onCancelStudent: cancelStudent,
             
         });
 
-        console.log('ID koji je menjan u EditStudRow.js je', st.id);
-        console.log('Godina koja je menjana u EditStudRow.js je', studForm.godine);
-        console.log('Adresa koja je menjana u EditStudRow.js je', studForm.adresa);
+        // console.log('ID koji je menjan u EditStudRow.js je', st.id);
+        // console.log('Godina koja je menjana u EditStudRow.js je', studForm.godine);
+        // console.log('Adresa koja je menjana u EditStudRow.js je', studForm.adresa);
 
         
         //DODAT JE END POINT ZA IZMENU NOVOG STUDENTA

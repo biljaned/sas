@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useForm } from '../hooks/useForm';
 import useRefreshToken from '../hooks/useRefreshToken';
 
-export const StudForm = memo(forwardRef(({ onSubmitStudent, buttonText }, ref) => {
+export const StudForm = memo(forwardRef(({ onSubmitStudent, buttonText},ref) => {
     console.log('render studenta');
     
   
@@ -11,9 +11,7 @@ export const StudForm = memo(forwardRef(({ onSubmitStudent, buttonText }, ref) =
     const [studForm, change, resetStudForm] = useForm({
         godine: '',
         adresa: '',
-        // year: 1900,
-        // color: '',
-        // price: 0,
+        
     });
 
     const submitStudent = () => {

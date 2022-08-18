@@ -9,7 +9,7 @@ import { StudForm } from './StudForm';
 
 import axios from "axios";
 
-const accToken = 'LeGZgK9vBkB1FA9SRWR6RA';
+const accToken = 'R7dyi2dfy8bmdF8diRxzew';
 
 
 export const StudTool = () => {
@@ -36,15 +36,16 @@ export const StudTool = () => {
         setStudents(students.concat({ ...st, id: Math.max(...students.map(c => c.id)) + 1 }));
         init();
         console.log('ID JE u StudTool.js', Math.max(...students.map(c => c.id)) + 1);
-        
+        console.log('Godina koja je dodata u StudTool.js',st.godine);
+        console.log('Adresa koja je dodata u StudTool.js',st.adresa);
 
-        //DODAT JE END POINT ZA UBACIVANJE NOVOG STUDENTA----format za ubacivanje je {"id":29,"godine":33,"adresa":"Limska"}
-        // const headers = {
-        //     "Content-Type": "application/json",
-        //     Authorization: `Bearer ${accToken}`,
+        //DODAT JE END POINT ZA UBACIVANJE NOVOG STUDENTA----
+        const headers = {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accToken}`,
 
-        // };
-        // axios.post('https://ge69b092f0f2339-sas1.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/sas/ubaciStudenta',{}, { headers })
+        };
+        axios.post('https://ge69b092f0f2339-sas1.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/sas/ubaciStudenta',{"id":Math.max(...students.map(c => c.id)) + 1,"godine":st.godine,"adresa":st.adresa}, { headers })
 
     }, [students, init]);
 

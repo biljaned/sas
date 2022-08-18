@@ -51,7 +51,7 @@ const Login = () => {
 
                 
                 <button type="submit" onClick={() => {
-                    if (ime === 'pera' && prezime === 'peric') { history.push('/StudTool') }
+                    if (ime === 'sistemi' && prezime === 'aplikacije') { history.push('/StudTool') }
                     else {console.log('----POGRESNI PARAMETRI----------')}
                 }}>Uloguj se</button>
             </form>

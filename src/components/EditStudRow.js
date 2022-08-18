@@ -7,7 +7,7 @@ import { useForm } from '../hooks/useForm';
 import { useDefaultInputFocus } from '../hooks/useDefaultInputFocus';
 import axios from "axios";
 
-const accToken = 'R7dyi2dfy8bmdF8diRxzew';
+const accToken = 'ebAdhbNnCb5hdGnDPvf7sw';
 
 export const EditStudRow = ({ st, onSaveStudent, onCancelStudent: cancelStudent, }) => {
     const [studForm, change] = useForm({

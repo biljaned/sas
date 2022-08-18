@@ -9,7 +9,7 @@ import { StudForm } from './StudForm';
 
 import axios from "axios";
 
-const accToken = 'R7dyi2dfy8bmdF8diRxzew';
+const accToken = 'ebAdhbNnCb5hdGnDPvf7sw';
 
 
 export const StudTool = () => {

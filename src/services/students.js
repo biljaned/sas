@@ -1,7 +1,7 @@
 import axios from "axios";
 const baseURL2 = 'https://ge69b092f0f2339-sas1.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/sas/students';
 
-const accToken = 'R7dyi2dfy8bmdF8diRxzew';
+const accToken = 'ebAdhbNnCb5hdGnDPvf7sw';
 
 
 export const getAllStudents = async () => {

@@ -8,6 +8,8 @@ export const getAllStudents = async () => {
 
   let students = [];
 
+  //DODAT JE END POINT ZA PRIKAZIVANJE STUDENATA
+
   // link za autorizaciju https://css-tricks.com/react-authentication-access-control/
   const res = await axios.get(baseURL2, {
     headers: {

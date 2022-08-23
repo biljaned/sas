@@ -1,5 +1,5 @@
 //import { useRef, useState, useEffect, useContext } from 'react';
-//import AuthContext from "../context/AuthProvider";
+import {AuthProvider} from "../context/AuthProvider";
 import { StudTool } from "./StudTool";
 import Login from "./Login";
 import {
@@ -12,14 +12,16 @@ import {
 function App() {
   return (
 
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/" ><Login /></Route>
-          <Route exact path="/studtool" ><StudTool /></Route>
-        </Switch>
-      </Router>
-    </div>
+    <AuthProvider>
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route exact path="/" ><Login /></Route>
+            <Route exact path="/studtool" ><StudTool /></Route>
+          </Switch>
+        </Router>
+      </div>
+    </AuthProvider>
   );
 }
 export default App;

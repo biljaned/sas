@@ -11,7 +11,7 @@ export const StudTable = memo(({
     onSaveStudent:saveStudent,
     onCancelStudent:cancelStudent,
 }) => {
-
+console.log("students",students)
     return <table>
         <thead>
             <tr>

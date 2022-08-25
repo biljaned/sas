@@ -4,7 +4,7 @@ import axios from 'axios';
 const baseURL = 'https://ge69b092f0f2339-sas1.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/sas';
 
 //const accToken = process.env.REACT_APP_ACCESS_TOKEN;
-const accToken = '-ISSRQFAwVAqGuD7sBlO7Q'
+const accToken = 'oSSc19wGDtfaVX79ui9IGQ'
 console.log("accToken",accToken)
 const options = {
   headers: {
